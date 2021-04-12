@@ -7,8 +7,11 @@ public final class Commande {
 	private ArrayList<Fruit> tabFruits = new ArrayList<Fruit>();
 	private final int MAX_FRUITS = 5;
 	
+	private EtatCommande etat;
+	
 	private Commande() {
-		super();		
+		super();
+		this.etat = new EtatCommandeEnAttente(this);
 	}
 	
 	public final synchronized static Commande creerCommande() {
@@ -32,5 +35,13 @@ public final class Commande {
 			System.out.print(fruit.getNom() + (fruit.getPepin()? " avec pépins" : " sans pépins") +  ", ");
 			fruit.afficherCalories();			
 		}
+	}
+	
+	public void traiterCommande() {
+		etat.traiterCommande(this);
+	}
+	
+	public void setEtat(EtatCommande etat) {
+		this.etat = etat;
 	}
 }

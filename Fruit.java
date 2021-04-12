@@ -1,5 +1,5 @@
 
-public class Fruit implements Contenu{
+public class Fruit extends Contenu{
 	
 	private String nom;
 	private Boolean pepin;
@@ -32,10 +32,10 @@ public class Fruit implements Contenu{
 		this.pepin = pepin;
 	}
 	
-	@Override
-	public void afficherFruit() {
-		System.out.println("Fruit [nom=" + nom + ", pepin=" + pepin + "]");		
-	}
+//	@Override
+//	public void afficherFruit() {
+//		System.out.println("Fruit [nom=" + nom + ", pepin=" + pepin + "]");		
+//	}
 	
 	public void afficherCalories() {
 		//afficher la valeur calorique du fruit
