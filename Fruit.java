@@ -1,6 +1,5 @@
 
 public class Fruit extends Contenu{
-	
 	private String nom;
 	private Boolean pepin;
 	private FruitCalorie calorie;

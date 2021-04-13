@@ -1,4 +1,3 @@
-
 public class EtatCommandeEnvoyee implements EtatCommande{
 	
 	private Commande commande;

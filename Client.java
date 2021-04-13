@@ -75,15 +75,16 @@ public class Client {
 		contenu = new CaractereDeco(contenu,"*");		
 		contenu.afficherFruit();
 		
-		Contenu c2 = new CompositeFruit();
+		CompositeFruit c2 = new CompositeFruit();
 		
+		
+		//Lab2 task3
+		System.out.println();
 		System.out.println("Premier état");
 		maCommande.traiterCommande();
 		System.out.println("Deuxième état");
 		maCommande.traiterCommande();
 		System.out.println("Troisième état");
-		maCommande.traiterCommande();
-		maCommande.traiterCommande();
 		maCommande.traiterCommande();
 		maCommande.traiterCommande();
 		

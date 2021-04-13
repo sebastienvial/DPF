@@ -1,4 +1,3 @@
-
 public class EtatCommandePayee implements EtatCommande {
 	
 	private final Commande commande;

@@ -8,7 +8,6 @@ public class CaractereDeco extends Decorateur {
 		contenu = cont;
 		this.caract = caract;
 	}
-
 	
 	public void afficherFruit() {
 		for (int i=0; i<NBR_CARACT; i++) System.out.print(this.caract);
@@ -18,8 +17,6 @@ public class CaractereDeco extends Decorateur {
 		System.out.println();
 		for (int i=0; i<NBR_CARACT; i++) System.out.print(this.caract);
 	}
-
-
 	
 
 

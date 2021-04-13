@@ -1,4 +1,3 @@
-
 public class EtatCommandeEnAttente implements EtatCommande {
 	
 	private final Commande commande;

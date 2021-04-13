@@ -23,23 +23,6 @@ public class CompositeFruit extends Contenu {
 		lstCmp.remove(contenu);
 	}
 	
-//	public Iterator getChildren() {
-//		return lstFruits.iterator();
-//	}
-
-//	@Override
-//	public void afficherFruit() {
-//		// TODO Auto-generated method stub
-//		String affichage = "Panier (";
-//		
-//		for (Iterator i = lstCmp.iterator(); i.hasNext(); ) {
-//			Contenu contenu = (Contenu) i.next();
-//			affichage += contenu.getNom() + " " ;			
-//		}
-//
-//		affichage = affichage.trim() + ")";
-//		System.out.print(affichage);		
-//	}
 
 	@Override
 	public Boolean getPepin() {
