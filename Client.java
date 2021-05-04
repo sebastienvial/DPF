@@ -1,7 +1,14 @@
+import java.util.Observer;
+
+import api.*;
 
 public class Client {
 
 	public static void main(String[] args) {
+		
+		System.out.println("---------- Labo1, task1------------");
+		System.out.println();
+		
 		Fruit fruit1 = new Fruit();
 		fruit1.setNom("pomme");
 		fruit1.setPepin(true);
@@ -14,7 +21,10 @@ public class Client {
 		fruit2.afficherFruit();
 		fruit2.afficherCalories();
 		
-		//Tache2
+		System.out.println();
+		System.out.println("---------- Labo1, task2------------");
+		System.out.println();
+		
 		FruitCalorie cal = new FruitCaloriePauvre();
 		Fruit fruit3 = new Fruit(cal, "kiwi", true);
 		fruit3.afficherFruit();
@@ -30,7 +40,8 @@ public class Client {
 		fruit5.afficherFruit();
 		fruit5.afficherCalories();
 		
-		//Tache3
+		System.out.println();
+		System.out.println("---------- Labo1, task3------------");
 		Commande maCommande = Commande.creerCommande();
 		
 		maCommande.ajoutFruit(fruit3);
@@ -59,6 +70,9 @@ public class Client {
 		pf1.ajouter(fruit4);
 		
 		//pf1.afficherFruit();
+		System.out.println();
+		System.out.println("---------- Labo2, task1------------");		
+		System.out.println();
 		
 		CompositeFruit pf2 = new CompositeFruit();
 		pf2.ajouter(fruit3);
@@ -70,6 +84,9 @@ public class Client {
 		big.ajouter(pf2);
 		big.afficherFruit();
 		
+		System.out.println();
+		System.out.println("---------- Labo2, task2------------");
+		System.out.println();
 		
 		Contenu contenu = new Fruit(cal,"Framboise",true);		
 		contenu = new CaractereDeco(contenu,"*");		
@@ -77,9 +94,10 @@ public class Client {
 		
 		CompositeFruit c2 = new CompositeFruit();
 		
-		
-		//Lab2 task3
 		System.out.println();
+		System.out.println("---------- Labo2, task3------------");
+		System.out.println();
+		
 		System.out.println("Premier état");
 		maCommande.traiterCommande();
 		System.out.println("Deuxième état");
@@ -87,6 +105,32 @@ public class Client {
 		System.out.println("Troisième état");
 		maCommande.traiterCommande();
 		maCommande.traiterCommande();
+		
+		System.out.println();
+		System.out.println("---------- Labo3, task3------------");		
+		System.out.println();
+		
+		FruitCalorie fce = new FruitCalorieEnrichi();
+		FruitCalorie fcn = new FruitCalorieNormal();
+		FruitCalorie fcp = new FruitCaloriePauvre();
+		Fruit f = new Fruit(fce, "fraise", false);
+		Fruit f1 = new Fruit(fcn, "framboise", true);
+		Fruit f2 = new Fruit(fcp, "coing", true);
+		f.afficherFruit();
+		f.afficherCalories();
+		f1.afficherCalories();
+		f2.afficherCalories();
+		
+		//ajout de l'observeur
+		CaloriesEnrichi ce = new CaloriesEnrichi();
+		//CaloriesNormal ce = new CaloriesNormal();
+		ce.addObserver((Observer)f);
+		ce.addObserver((Observer)f1);
+		ce.addObserver((Observer)f2);
+		
+		//changement sur le sujet
+		ce.changeCalculCalorie();
+		
 		
 		
 		
